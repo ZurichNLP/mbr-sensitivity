@@ -1,5 +1,5 @@
 # mbr-sensitivity
-Data and code for the paper "Identifying Weaknesses in Machine Translation Metrics Through Minimum Bayes Risk Decoding: A Case Study for COMET"
+Data and code for the paper ["Identifying Weaknesses in Machine Translation Metrics Through Minimum Bayes Risk Decoding: A Case Study for COMET"](https://arxiv.org/pdf/2202.05148.pdf)
 
 # Motivation
 
