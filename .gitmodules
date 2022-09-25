@@ -1,0 +1,3 @@
+[submodule "COMET-mbr"]
+	path = COMET-mbr
+	url = https://github.com/chanberg/COMET-mbr
