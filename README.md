@@ -7,11 +7,11 @@ Neural metrics have achieved impressive correlation with human judgements in the
 
 # Installation
 
-To install this repository and its
+To install this repository and its submodule.
 
 git clone --recursive https://github.com/ZurichNLP/mbr-sensitivity
 
-The evaluation scripts need numpy and [spaCy](https://spacy.io/) to run named entity recognition. Please install numpy, spaCy and the corresponding language packages as follows:
+The evaluation scripts need numpy and [spaCy](https://spacy.io/) (to run named entity recognition). Please install numpy, spaCy and the corresponding language packages as follows:
 
     pip install numpy
     pip install spacy
@@ -146,9 +146,9 @@ You can then specify the retrained checkpoint when calling `comet-score` via the
 
 You can also download the checkpoints for the models we retrained for the paper:
 
-- [penalty 0.2](https://files.ifi.uzh.ch/cl/amrhein/mbr_paper/retrain-comet-da-0.2.zip)
-- [penalty 0.5](https://files.ifi.uzh.ch/cl/amrhein/mbr_paper/retrain-comet-da-0.5.zip)
-- [penalty 0.8](https://files.ifi.uzh.ch/cl/amrhein/mbr_paper/retrain-comet-da-0.8.zip)
+- [retrain-comet-da-0.2](https://files.ifi.uzh.ch/cl/amrhein/mbr_paper/retrain-comet-da-0.2.zip)
+- [retrain-comet-da-0.5](https://files.ifi.uzh.ch/cl/amrhein/mbr_paper/retrain-comet-da-0.5.zip)
+- [retrain-comet-da-0.8](https://files.ifi.uzh.ch/cl/amrhein/mbr_paper/retrain-comet-da-0.8.zip)
 
 # Citation
 
