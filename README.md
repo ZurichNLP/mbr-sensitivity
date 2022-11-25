@@ -1,9 +1,9 @@
 # mbr-sensitivity
-Data and code for the paper ["Identifying Weaknesses in Machine Translation Metrics Through Minimum Bayes Risk Decoding: A Case Study for COMET"](https://arxiv.org/pdf/2202.05148.pdf)
+Data and code for the paper ["Identifying Weaknesses in Machine Translation Metrics Through Minimum Bayes Risk Decoding: A Case Study for COMET"](https://aclanthology.org/2022.aacl-main.83/)
 
 # Motivation
 
-Neural metrics have achieved impressive correlation with human judgements in the evaluation of machine translation systems, but before we can safely optimise towards such metrics, we should be aware of (and ideally eliminate) biases toward bad translations that receive high scores. This repository provides all data and code to reproduce our [analysis](https://arxiv.org/pdf/2202.05148.pdf) that showed that [COMET](https://github.com/Unbabel/COMET) is not sensitive enough towards changes in numbers and named entities.
+Neural metrics have achieved impressive correlation with human judgements in the evaluation of machine translation systems, but before we can safely optimise towards such metrics, we should be aware of (and ideally eliminate) biases toward bad translations that receive high scores. This repository provides all data and code to reproduce our [analysis](https://aclanthology.org/2022.aacl-main.83/) that showed that [COMET](https://github.com/Unbabel/COMET) is not sensitive enough towards changes in numbers and named entities.
 
 # Installation
 
@@ -26,7 +26,7 @@ To run MBR decoding with our fork of COMET, install COMET locally:
 
 # Automatic Analysis
 
-If you want to reproduce the results of our automatic analysis (Tables 2 and 5 in the [paper](https://arxiv.org/pdf/2202.05148.pdf)), you can run the following command for numbers:
+If you want to reproduce the results of our automatic analysis (Tables 2 and 5 in the [paper](https://aclanthology.org/2022.aacl-main.83/)), you can run the following command for numbers:
 
     python eval_scripts/evaluate_numbers.py -s paper_results/automatic_analysis/src.LANGPAIR.txt -f paper_results/automatic_analysis/METRIC.LANGPAIR.txt
 
@@ -56,7 +56,7 @@ where `TRGLANG` is either "de" or "en",`LANGPAIR` is either "de-en" or "en-de" a
 
 You can also provide multiple files for the `-f` argument. The script will print the results for every file to stdout (one file per line).
 
-Note that newer spaCy model versions can result in different scores for the named entity evaluation but the gaps between the different metrics should be similarly large as in the [paper](https://arxiv.org/pdf/2202.05148.pdf).
+Note that newer spaCy model versions can result in different scores for the named entity evaluation but the gaps between the different metrics should be similarly large as in the [paper](https://aclanthology.org/2022.aacl-main.83/).
 
 If you want to compare a new utility function to our results, you can run MBR decoding using the samples provided under `paper_results/automatic_analysis/samples.de-en.txt` and `paper_results/automatic_analysis/samples.en-de.txt`.
 
@@ -64,7 +64,7 @@ If you want to evaluate on other test sets with these scripts, you need the sour
 
 # Sensitivity Analysis
 
-If you want to reproduce the results of our sensitivity analysis (as reported in Tables 3, 8, 9 and 10 and Figures 1 and 2 in the [paper](https://arxiv.org/pdf/2202.05148.pdf)), you can run the following command:
+If you want to reproduce the results of our sensitivity analysis (as reported in Tables 3, 8, 9 and 10 and Figures 1 and 2 in the [paper](https://aclanthology.org/2022.aacl-main.83/)), you can run the following command:
 
     python eval_scripts/evaluate_sensitivity.py -f paper_results/sensitivity_analysis/METRIC.TYPE.LANGPAIR.json
 
@@ -152,16 +152,18 @@ You can also download the checkpoints for the models we retrained for the paper:
 
 # Citation
 
-If you use this code or data, please cite our [paper](https://arxiv.org/pdf/2202.05148.pdf):
+If you use this code or data, please cite our [paper](https://aclanthology.org/2022.aacl-main.83/):
 
     @inproceedings{amrhein-sennrich-2022-identifying,
-    title = "Identifying Weaknesses in Machine Translation Metrics Through Minimum Bayes Risk Decoding: A Case Study for {COMET}",
-    author = {Amrhein, Chantal  and
-      Sennrich, Rico},
-    booktitle = "2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th International Joint Conference on Natural Language Processing",
+    title = "Identifying Weaknesses in Machine Translation Metrics Through Minimum {B}ayes Risk Decoding: A Case Study for {COMET}",
+    author = "Amrhein, Chantal  and
+      Sennrich, Rico",
+    booktitle = "Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th 
+    International Joint Conference on Natural Language Processing",
     month = nov,
     year = "2022",
-    address = "Online",
+    address = "Online only",
     publisher = "Association for Computational Linguistics",
-    eprint = {2202.05148}
+    url = "https://aclanthology.org/2022.aacl-main.83",
+    pages = "1125--1141",
     }
