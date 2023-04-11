@@ -1,11 +1,11 @@
 # mbr-sensitivity
 Data and code for the paper ["Identifying Weaknesses in Machine Translation Metrics Through Minimum Bayes Risk Decoding: A Case Study for COMET"](https://aclanthology.org/2022.aacl-main.83/)
 
-# Motivation
+## Motivation
 
 Neural metrics have achieved impressive correlation with human judgements in the evaluation of machine translation systems, but before we can safely optimise towards such metrics, we should be aware of (and ideally eliminate) biases toward bad translations that receive high scores. This repository provides all data and code to reproduce our [analysis](https://aclanthology.org/2022.aacl-main.83/) that showed that [COMET](https://github.com/Unbabel/COMET) is not sensitive enough towards changes in numbers and named entities.
 
-# Installation
+## Installation
 
 To install this repository and its submodule.
 
@@ -24,7 +24,7 @@ To run MBR decoding with our fork of COMET, install COMET locally:
     cd COMET-mbr
     poetry install
 
-# Automatic Analysis
+## Automatic Analysis
 
 If you want to reproduce the results of our automatic analysis (Tables 2 and 5 in the [paper](https://aclanthology.org/2022.aacl-main.83/)), you can run the following command for numbers:
 
@@ -62,7 +62,7 @@ If you want to compare a new utility function to our results, you can run MBR de
 
 If you want to evaluate on other test sets with these scripts, you need the source sentences, reference sentences and translations (and/or MBR outputs). The files should be parallel, in one-sentence-per-line format.
 
-# Sensitivity Analysis
+## Sensitivity Analysis
 
 If you want to reproduce the results of our sensitivity analysis (as reported in Tables 3, 8, 9 and 10 and Figures 1 and 2 in the [paper](https://aclanthology.org/2022.aacl-main.83/)), you can run the following command:
 
@@ -81,7 +81,7 @@ The script prints the sensitivity scores for all error types to stdout. The rows
     python eval_scripts/evaluate_sensitivity.py -f paper_results/sensitivity_analysis/METRIC.TYPE.LANGPAIR.json -o ne-add ne-del ne-sub
 
 
-# MBR with COMET
+## MBR with COMET
 
 COMET now has an [official implementation of MBR decoding](https://github.com/Unbabel/COMET#scoring-mt-outputs) using the `comet-mbr` command. You may want to use this implementation for your own experiments with COMET as a utility function in MBR decoding.
 
@@ -130,7 +130,7 @@ and the following command for comparing to the two references:
     python COMET-mbr/run_mbr_for_sensitivity.py -j paper_results/sensitivity_analysis/references-as-support.de-en.json -t paper_results/sensitivity_analysis/references-as-support.de-en.txt -ns 2 -o wmt20-comet-da.references-as-support.json
 
 
-# Retraining COMET
+## Retraining COMET
 
 First, download the training data with the added synthetic data:
 
@@ -158,7 +158,7 @@ If you use this code or data, please cite our [paper](https://aclanthology.org/2
     title = "Identifying Weaknesses in Machine Translation Metrics Through Minimum {B}ayes Risk Decoding: A Case Study for {COMET}",
     author = "Amrhein, Chantal  and
       Sennrich, Rico",
-    booktitle = "Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th 
+    booktitle = "Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th
     International Joint Conference on Natural Language Processing",
     month = nov,
     year = "2022",
